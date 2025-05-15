@@ -28,7 +28,6 @@ public class SupplierDocumentsEntity {
     @Column(name = "id")
     private Long id;
 
-    // Relacionamento com SupplierEntity
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "supplier_id", nullable = false)
     private SupplierEntity supplier;

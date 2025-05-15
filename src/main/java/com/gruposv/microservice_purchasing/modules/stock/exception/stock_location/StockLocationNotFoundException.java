@@ -1,7 +1,0 @@
-package com.gruposv.microservice_purchasing.modules.stock.exception.stock_location;
-
-public class StockLocationNotFoundException extends RuntimeException {
-  public StockLocationNotFoundException(String message) {
-    super(message);
-  }
-}

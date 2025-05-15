@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gruposv</groupId>
-	<artifactId>microservice_stock</artifactId>
+	<artifactId>microservice_purchasing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservice_stock</name>
+	<name>microservice_purchasing</name>
 	<description>Microservice para gerenciamento estoque</description>
 	<url/>
 	<licenses>

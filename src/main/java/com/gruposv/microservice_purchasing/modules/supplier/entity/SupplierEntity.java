@@ -3,14 +3,17 @@ package com.gruposv.microservice_purchasing.modules.supplier.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
+
+import com.gruposv.microservice_purchasing.modules.supplier_documents.entity.SupplierDocumentsEntity;
 
 @Getter
 @Setter
@@ -49,6 +52,9 @@ public class SupplierEntity {
 
     @Column(name = "supplier_rating", nullable = false)
     private Double supplierRating;
+
+    @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<SupplierDocumentsEntity> supplierDocuments;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)

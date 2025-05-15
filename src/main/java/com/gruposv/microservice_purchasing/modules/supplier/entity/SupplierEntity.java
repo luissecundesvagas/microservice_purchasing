@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 import org.hibernate.annotations.Where;
 
 
@@ -46,18 +48,9 @@ public class SupplierEntity {
     @Column(name = "supplier_rating", nullable = false)
     private Double supplierRating;
 
-}
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
 
-/* 
-id: INT AUTO_INCREMENT, PRIMARY KEY
-supplier_name: VARCHAR(255)
-document_number: VARCHAR(50) – (CNPJ/CPF)
-address: VARCHAR(255) – (ou TEXT, se for necessário maior detalhamento)
-contact_phone: VARCHAR(50)
-contact_email: VARCHAR(100)
-payment_terms: VARCHAR(100)
-bank_account_info: TEXT
-supplier_rating: DECIMAL(3,2) – (por exemplo, nota de 0.00 a 5.00)
-created_at: DATETIME
-updated_at: DATETIME
-*/
+    public SupplierEntity() {}
+
+}
